@@ -10,6 +10,7 @@ function Content() {
     <section className="content-container">
       <div className="product-list">
         {movies.map((index) => (
+          
           <div className="product">
             <Link to={"/item/:id"}>
               <h2>{index.Title}</h2>
@@ -20,6 +21,7 @@ function Content() {
                   <span className="session">Seanslar</span>
                   <span className="disclaimer">12+</span>
                 </p>
+                <h1>asd</h1>
               </div>
             </Link>
           </div>
