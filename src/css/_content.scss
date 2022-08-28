@@ -1,0 +1,99 @@
+.product-list {
+  max-width: 84%;
+  background-color: aliceblue;
+  margin: 5vh auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+   .product {
+    margin-top: 5vh;
+    width: 21%;
+    height: 430px;
+    border: 1px solid #cee5d0;
+    border-radius: 8px;
+    overflow: hidden;
+    &:hover {
+      transform: scale(1.04);  
+      cursor: pointer;
+      transition: 0.5s ease;
+      & h2 {
+        background-color: #277BC0;
+        color: #cee5d0;
+        transition: 0.5s ease-in-out;
+      }
+      .product-img{
+      overflow: hidden;
+      img{
+        transform: scale(1.2);  
+      cursor: pointer;
+      transition: 1s ease;
+      }
+    }
+      
+    }
+    h2 {
+      background-color: #cee5d0;
+      color: black;
+      padding: 3vh;
+      padding-top: 0.5vh;
+      text-align: center;
+      height: 51px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    .product-img {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      gap: 4vh;  
+      img {
+        width: 100%;
+        height: 300px;
+        transition: 0.5s ease;
+
+        // &:hover {
+        //   transform: scale(1.05);  
+        //     cursor: pointer;
+        //     transition: 0.5s ease;
+        // }
+      }
+
+      .product-tag {
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #89cffd;
+        border-radius: 5px;
+        padding: 2px;
+      }
+
+      .img-p {
+        text-align: center;
+        position: relative;
+        background-color: #cee5d0 ;
+        height: 50px;
+
+        .session {
+            background-color: #334E9E;
+            color: #fff;
+            padding:6px 12px;
+            border-radius: 20px;
+            position: absolute;
+            top: 1vh;
+            left: 6vw;
+          }
+        .disclaimer {
+            position:absolute;
+            top: 1vh;
+            right: 1vh;
+            background-color: red;
+            color: #fff;
+            border-radius: 45%;
+        }
+      }
+    }
+  }
+}

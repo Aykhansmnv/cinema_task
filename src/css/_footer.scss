@@ -1,0 +1,117 @@
+.announcement {
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(rgba(174, 0, 255, 0.5), rgba(192, 181, 181, 0.384)) ,url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLWbgb5eOvu61flTbz-AJpX0w0CuwUpkBX5g&usqp=CAU");
+    align-items: center;
+    text-align: center;
+    img {
+    height: 100%;
+    }
+}
+
+.about-us{
+    background:linear-gradient(rgba(0, 12, 185, 0.89), rgba(0, 21, 139, 0.678));
+    width: 100%;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+
+    .footer-container {
+        display: flex;
+        width: 84%;
+        margin: 0 auto;
+
+        .footer-contact {
+            display: flex;
+            width: 28%;
+            justify-content: space-between;
+
+            .contact {
+                display: flex;
+                gap: 3vw;
+                justify-content: space-between;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 1vh;
+                list-style: none;
+
+                li {
+                    color: #fff;
+
+                    h4 {
+                        font-size: 14px;
+
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+            p {
+                border-left: 2px solid #fff;
+                height: 92%;
+                margin: auto;
+            }
+        }
+
+        .footer-social {
+            display: flex;
+            gap:5px;
+            width: 28%;
+            align-items: center;
+            .social {
+                ul {
+                    display: flex;
+                    list-style: none;
+                    gap: 3vh;
+
+                    li {
+                        border: 1px solid #fff;
+                        padding: 6px;
+                    }
+                }
+               
+            }
+            p {
+                border-right: 2px solid #fff;
+                height: 92%;
+                margin: auto;
+            }
+        }
+    }
+
+    .copyright {
+        width: 88%;
+        margin: 3vh auto;
+
+        .copyright-info {
+            display: flex;
+            justify-content: space-between;
+
+            .info {
+                h4{
+                    color: #fff;
+                }
+                p a {
+                    text-decoration: underline;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 550;
+                }
+            }
+
+            h3 a {
+                color: #fff;
+                
+                &:hover {
+                    font-size: 26px;
+                    transform: scale(2.4);  
+                    cursor: pointer     ;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+    }
+}

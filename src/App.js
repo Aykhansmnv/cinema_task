@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import {lazy,Suspense,useEffect} from 'react';
+import {Route , Routes} from 'react-router-dom';
+import "./css/style.scss"
+import axios from "axios";
+import {useDispatch} from "react-redux"
+const Home = lazy(() => import("./pages/Home"))
+const Movie = lazy(() => import("./pages/Movie"))
 
 function App() {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    axios.get("https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies")
+    .then(res => res.data)
+    .then(res => dispatch({type:"ALL_DATA",payload:res}))
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>  
+      <Route path='/' element={
+      <Suspense feelback={<h1>Loading...</h1>}>
+        <Home />
+      </Suspense>
+    } />
+    <Route path='/item/:id' element={
+      <Suspense feelback={<h1>Loading...</h1>}>
+        <Movie />
+      </Suspense>
+    } />
+    </Routes>
+    
   );
 }
 
